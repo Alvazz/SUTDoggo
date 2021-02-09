@@ -48,6 +48,7 @@ def find_device_in_dfu_mode_thread():
 t = threading.Thread(target=find_device_in_dfu_mode_thread)
 t.daemon = True
 t.start()
+t.join()
 
 # Scan for ODrives not in DFU mode
 # We only scan on USB because DFU is only implemented over USB
